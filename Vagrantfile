@@ -81,6 +81,6 @@ Vagrant.configure("2") do |config|
      curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
      apt install -y nodejs
      apt install -y npm
-     apt upgrade
+     apt upgrade -y
    SHELL
 end
