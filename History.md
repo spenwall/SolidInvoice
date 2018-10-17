@@ -1,3 +1,13 @@
+2.0.0 Alpha 2 / 2018-03-29
+==================
+
+  * Add multi-user support (#195)
+  * Update Dependencies (#202, #199)
+  * Add button to print quotes and invoices (#193)
+  * Display literal country name (#197)
+  * Fix RequireJS not being inlcluded anymore
+  * Add server_version to doctrine/dbal configuration
+
 2.0.0 Alpha 1 / 2017-08-22
 =========================
 

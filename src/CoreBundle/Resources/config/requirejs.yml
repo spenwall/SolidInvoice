@@ -31,15 +31,9 @@ config:
             deps:
                 - jquery
                 - moment
-        material:
-            deps:
-                - jquery
-                - material.ripples
-        material.ripples:
-            deps:
-                - jquery
+
         fos_router:
-            exports: fos.Router
+            exports: Routing
     paths:
         # External dependencies loaded through NPM/Yarn
         backbone: ../assets/backbone.js
@@ -53,8 +47,6 @@ config:
         accounting: ../assets/accounting.js
         parsley: ../assets/parsley.js
         moment: ../assets/moment.js
-        material: ../assets/material.js
-        material.ripples: ../assets/ripples.js
         jquery.select2: ../assets/select2.js
         handlebars.runtime: ../assets/handlebars.runtime.js
         jquery.placeholder: ../assets/jquery.placeholder.js
@@ -69,7 +61,6 @@ config:
 
         routing: solidinvoicecore/js/extend/routing
         fos_router: fosjsrouting/js/router.js
-        fos_routing_data: ../js/fos_js_routes
         Translator: bazingajstranslation/js/translator.min.js
         core: solidinvoicecore/js/
         core/view: solidinvoicecore/js/itemview.js
@@ -98,6 +89,7 @@ build:
         quote: 'empty:'
         invoice: 'empty:'
         profile: 'empty:'
+        user: 'empty:'
         payments: 'empty:'
         moment: 'empty:'
         grid: 'empty:'

@@ -3,13 +3,11 @@ SolidInvoice
 
 [![Build Status](https://travis-ci.org/SolidInvoice/SolidInvoice.png?branch=master)](https://travis-ci.org/SolidInvoice/SolidInvoice)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/SolidInvoice/SolidInvoice/badges/quality-score.png?s=fdd7a5f5080807e95a317b9c0db07e8d5ce8cb63)](https://scrutinizer-ci.com/g/SolidInvoice/SolidInvoice/)
-[![Dependency Status](https://www.versioneye.com/user/projects/557ebccc61626613850000cc/badge.svg)](https://www.versioneye.com/user/projects/557ebccc61626613850000cc)
+[![Gitter chat](https://badges.gitter.im/SolidInvoice/SolidInvoice.png)](https://gitter.im/SolidInvoice/SolidInvoice)
 
 Open-Source General Billing Manager
 
 SolidInvoice is an open-source application that allows you to manage clients and contacts and send invoices and quotes.
-
-
 
 Requirements
 ------------
@@ -62,7 +60,7 @@ $ php composer.phar install
 After all the dependencies has been installed, the next step is to install all the web assets
 
 ```bash
-$ php app/console assets:install --symlink web
+$ php bin/console assets:install --symlink web
 ```
 
 The final step is to install the Node packages, and compile all the assets
@@ -73,6 +71,15 @@ $ ./node_modules/.bin/gulp
 ```
 
 Now you should have a fully working copy of SolidInvoice.
+
+If you want to run SolidInvoice in production mode, some additional steps is required:
+
+```bash
+$ php bin/console fos:js-routing:dump --callback=define
+$ php bin/console bazinga:js-translation:dump --merge-domains
+```
+
+Otherwise you can run the app using `app_dev.php` to run it in development mode.
 
 Features
 --------
@@ -104,7 +111,7 @@ Please see the [LICENSE](LICENSE) file for the full license.
 Demo
 ------------
 
-[http://demo.solidinvoice.org](http://demo.solidinvoice.org)
+[http://demo.solidinvoice.co/](http://demo.solidinvoice.co/)
 
 
 [1]: http://symfony.com
